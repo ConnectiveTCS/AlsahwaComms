@@ -11,7 +11,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        {{-- Fontawesome --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -20,12 +21,12 @@
         <div class="flex min-h-screen flex-col items-center bg-gray-900 pt-6 sm:pt-0 dark:bg-gray-900">
             <div class="mt-16">
                 <a href="/">
-                    <x-application-logo class="h-20 w-20 fill-current text-gray-500 drop-shadow-lg shadow-gray-50" />
+                    <x-application-logo class="h-20 w-20 fill-current text-gray-500 drop-shadow-lg" />
                 </a>
             </div>
 
             <div
-                class="{{ $attributes->get('class', 'w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg') }}">
+                class="{{ $attributes->get('class', 'w-full mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg') }}">
                 {{ $slot }}
             </div>
         </div>
