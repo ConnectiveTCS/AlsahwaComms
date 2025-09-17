@@ -45,4 +45,25 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function roles() {
+        return $this->belongsToMany(Role::class);
+    }
+
+    public function classrooms() {
+        return $this->belongsToMany(Classroom::class)->withPivot('type')->withTimestamps();
+    }
+
+    public function messagesSent() {
+        return $this->hasMany(Message::class, 'sender_id');
+    }
+
+    public function messagesReceived() {
+        return $this->belongsToMany(Message::class, 'message_user', 'recipient_id', 'message_id')
+                    ->withPivot('is_read');
+    }
+
+    public function announcementsSent() {
+        return $this->hasMany(Announcement::class, 'sender_id');
+    }
 }

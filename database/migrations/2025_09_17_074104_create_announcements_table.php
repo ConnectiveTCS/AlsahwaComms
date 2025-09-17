@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('body');
+            $table->unsignedBigInteger('sender_id');
+            $table->string('target_role')->nullable(); // null = all users
             $table->timestamps();
+
+            $table->foreign('sender_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
