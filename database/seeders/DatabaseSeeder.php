@@ -15,26 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(RoleSeeder::class);
-        // Admin User
-        User::factory()->create([
-            'name' => 'Admin User',
-            'email' => 'admin@acewebdesign.co.za',
-            'password' => Hash::make('1'),
-            'role_id' => 1,
-        ]);
-        // Teacher User
-        User::factory()->create([
-            'name' => 'Teacher User',
-            'email' => 'teacher@acewebdesign.co.za',
-            'password' => Hash::make('1'),
-            'role_id' => 2,
-        ]);
-        // Parent User
-        User::factory()->create([
-            'name' => 'Parent User',
-            'email' => 'parent@acewebdesign.co.za',
-            'password' => Hash::make('1'),
-            'role_id' => 3,
-        ]);
+        $this->call(UserSeeder::class);
     }
 }

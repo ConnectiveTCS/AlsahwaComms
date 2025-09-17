@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->unsignedBigInteger('parent_id')->nullable()->index();
+            $table->string('avatar')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
 
             $table->foreign('parent_id')->references('id')->on('users')->onDelete('cascade');
