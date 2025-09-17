@@ -6,9 +6,9 @@
     @if($isImage)
         <img src="{{ asset('storage/' . $attachment->file_path) }}" 
              alt="{{ $attachment->file_name }}" 
-             class="w-full h-20 object-cover rounded mb-1">
+             class="w-full h-20 object-cover rounded-sm mb-1">
     @else
-        <div class="h-20 flex items-center justify-center bg-gray-200 rounded mb-1">
+        <div class="h-20 flex items-center justify-center bg-gray-200 rounded-sm mb-1">
             📎
         </div>
     @endif

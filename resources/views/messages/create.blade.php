@@ -14,12 +14,12 @@
 
         <div>
             <label class="block font-semibold text-gray-700">Subject</label>
-            <input type="text" name="subject" class="w-full border-gray-300 rounded-lg shadow-sm">
+            <input type="text" name="subject" class="w-full border-gray-300 rounded-lg shadow-xs">
         </div>
 
         <div>
             <label class="block font-semibold text-gray-700">Message</label>
-            <textarea name="body" rows="5" class="w-full border-gray-300 rounded-lg shadow-sm"></textarea>
+            <textarea name="body" rows="5" class="w-full border-gray-300 rounded-lg shadow-xs"></textarea>
         </div>
 
         <div>
@@ -28,7 +28,7 @@
         </div>
 
         <div>
-            <button class="bg-biscay hover:bg-matisse text-white px-4 py-2 rounded-lg shadow">
+            <button class="bg-biscay hover:bg-matisse text-white px-4 py-2 rounded-lg shadow-sm">
                 Send Message
             </button>
         </div>

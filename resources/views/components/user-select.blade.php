@@ -4,7 +4,7 @@
            @focus="open = true"
            @click.away="open = false"
            placeholder="Search users..."
-           class="w-full border-gray-300 rounded-lg shadow-sm">
+           class="w-full border-gray-300 rounded-lg shadow-xs">
 
     <div x-show="open" class="absolute z-10 mt-1 w-full bg-white shadow-lg rounded-lg max-h-60 overflow-y-auto">
         @foreach($users as $user)

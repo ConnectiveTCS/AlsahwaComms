@@ -1,4 +1,4 @@
-<div class="bg-white rounded-2xl shadow p-4 mb-4">
+<div class="bg-white rounded-2xl shadow-sm p-4 mb-4">
     <div class="flex justify-between items-center border-b pb-2 mb-2">
         <div>
             <h3 class="text-lg font-semibold">{{ $message->subject ?? 'No Subject' }}</h3>
